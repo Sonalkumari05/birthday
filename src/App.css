@@ -1,0 +1,150 @@
+/* General styles */
+.App {
+  text-align: center;
+  margin-top: 50px;
+  overflow: hidden; /* Ensure the balloons don't overflow */
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  height: 100vh; /* Make sure it takes up full screen */
+}
+
+/* Styling for marquee */
+marquee {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffcc00;
+  margin: 20px 0;
+}
+
+/* Styling for birthday image */
+.birthday-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin-top: 20px;
+  border: 4px solid #ffcc00;
+}
+
+/* CSS Balloons */
+.balloon {
+  position: absolute;
+  bottom: -150px; /* Starts below the screen */
+  width: 60px;
+  height: 80px;
+  background-color: #ff6666; /* Default balloon color */
+  border-radius: 50% 50% 50% 50%;
+  animation: floatUp 8s infinite ease-in-out;
+  box-shadow: inset -3px -10px 0 rgba(255, 255, 255, 0.5);
+}
+
+.balloon:before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 2px;
+  height: 30px;
+  background: #666;
+}
+
+/* Different balloon colors and positions */
+.balloon1 {
+  left: 10%;
+  background-color: #ff6666; /* Red balloon */
+  animation-delay: 0s;
+}
+
+.balloon2 {
+  left: 30%;
+  background-color: #ffcc00; /* Yellow balloon */
+  animation-delay: 2s;
+}
+
+.balloon3 {
+  left: 50%;
+  background-color: #66ccff; /* Blue balloon */
+  animation-delay: 4s;
+}
+
+.balloon4 {
+  left: 70%;
+  background-color: #66ff66; /* Green balloon */
+  animation-delay: 6s;
+}
+
+.balloon5 {
+  left: 90%;
+  background-color: #ff66cc; /* Pink balloon */
+  animation-delay: 8s;
+}
+
+/* Balloon float animation */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-50vh);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .birthday-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  marquee {
+    font-size: 18px;
+  }
+
+  .balloon {
+    width: 50px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .birthday-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  marquee {
+    font-size: 16px;
+  }
+
+  .balloon {
+    width: 40px;
+    height: 60px;
+  }
+}
