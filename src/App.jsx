@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>🎉 Happy Birthday, Anshul ! 🎉</h1>
+        <h1>🎉 Happy Birthday, Dada Ji ! 🎉</h1>
 
         {/* Marquee for moving text */}
         <marquee behavior="scroll" direction="left">
@@ -21,6 +21,8 @@ function App() {
           alt="Birthday Party"
           className="birthday-img"
         />
+
+        <p> Pic achi hna? 😂 </p>
 
         {/* CSS Balloons */}
         <div className="balloon balloon1"></div>
